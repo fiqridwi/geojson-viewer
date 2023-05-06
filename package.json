@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
     "maplibre-gl": "^2.4.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
