@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<div id="map"></div>
+		<div class="main-container">
+			<div id="map"></div>
+			<div class="menu"></div>
+		</div>
 	</div>
 </template>
 <script setup lang="ts">
@@ -36,10 +39,32 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.main-container {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	flex-shrink: 0;
+	overflow-x: hidden;
+}
 #map {
 	position: absolute;
+	left: 0;
 	top: 0;
 	bottom: 0;
-	width: 100%;
+	width: 70%;
+	flex-basis: 0px;
+	flex-grow: 1;
+	flex-shrink: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.menu {
+	background-color: white;
+	max-width: 30rem;
+	width: 40%;
 }
 </style>
