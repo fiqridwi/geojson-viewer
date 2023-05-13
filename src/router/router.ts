@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouterView } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Map from "../views/Map.vue";
 
 const routes = [

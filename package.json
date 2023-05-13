@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "maplibre-gl": "^2.4.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
