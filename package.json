@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "maplibre-gl": "^2.4.0",
+    "monaco-editor": "^0.38.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
