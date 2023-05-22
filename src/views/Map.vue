@@ -10,11 +10,7 @@
 		></div>
 		<div
 			class="sidepanel"
-			:style="
-				isSidePanel
-					? 'width:30rem'
-					: 'width:0'
-			"
+			:style="isSidePanel ? 'width:30rem' : 'width:0'"
 		>
 			<div class="sidepanel-menu">
 				<div
@@ -32,13 +28,9 @@
 			</div>
 			<div class="sidepanel-content">
 				<div v-if="activeMenu == 'json'">
-					Json
+					<div id="code-container"></div>
 				</div>
-				<div
-					v-else-if="
-						activeMenu == 'style'
-					"
-				>
+				<div v-else-if="activeMenu == 'style'">
 					style
 				</div>
 			</div>
@@ -46,9 +38,7 @@
 		<div
 			class="sidepanel-toggle"
 			:style="
-				isSidePanel
-					? 'right:30rem;'
-					: 'right:0;'
+				isSidePanel ? 'right:30rem;' : 'right:0;'
 			"
 			@click="toggleSidepanel"
 		>
@@ -64,7 +54,4 @@
 </template>
 <script src="./Map.ts" lang="ts"></script>
 
-<style
-	src="../assets/styles/Map.scss"
-	lang="scss"
-></style>
+<style src="../assets/styles/Map.scss" lang="scss"></style>
