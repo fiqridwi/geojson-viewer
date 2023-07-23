@@ -63,3 +63,21 @@ body {
 #code-container {
 	height: 100rem;
 }
+
+.current-location-button {
+	position: absolute;
+	bottom: 8rem;
+	left: 0.6rem;
+	background-color: #fff;
+	width: 2.4rem;
+	height: 2.3rem;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #cdcccc;
+}
+.current-location-button:hover {
+	cursor: pointer;
+	background-color: #f1f1f1;
+}

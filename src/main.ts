@@ -3,9 +3,9 @@ import "./style.css";
 import App from "./App.vue";
 import router from "./router/router";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faChevronCircleRight, faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronCircleRight, faChevronCircleLeft, faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-library.add(faChevronCircleRight, faChevronCircleLeft);
+library.add(faChevronCircleRight, faChevronCircleLeft, faLocationCrosshairs);
 
 const app = createApp(App);
 

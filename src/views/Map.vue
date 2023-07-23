@@ -19,8 +19,12 @@
 		</div>
 
 		<!-- sidepanel button -->
-		<div class="sidepanel-toggle" :style="isSidePanel ? 'right:30%;' : 'right:0;'" @click="toggleSidepanel">
+		<div class="sidepanel-toggle" :style="isSidePanel ? 'right:30%;' : 'right:0;'" @click="toggleSidepanel()">
 			<font-awesome-icon :icon="isSidePanel ? 'chevron-circle-right' : 'chevron-circle-left'" />
+		</div>
+		<!-- current location button -->
+		<div class="current-location-button" @click="handleCurrentLocation()">
+			<font-awesome-icon icon="location-crosshairs" />
 		</div>
 	</div>
 </template>
