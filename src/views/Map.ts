@@ -1,16 +1,18 @@
-import { onMounted, ref } from "vue";
 import maplibregl from "maplibre-gl"; // or "const maplibregl = require('maplibre-gl');"
 import * as monaco from "monaco-editor";
 export default {
-	setup() {
-		let isSidePanel = ref(true);
-		let activeMenu = ref("json");
-		const toggleSidepanel = () => {
-			console.log("toggleSidepanel");
-			isSidePanel.value = !isSidePanel.value;
+	data() {
+		return {
+			isSidePanel: true,
+			activeMenu: "json",
 		};
-		onMounted(() => {
-			let mapEl: HTMLElement | any;
+	},
+	mounted() {
+		this.mountMap();
+	},
+	methods: {
+		mountMap() {
+			let mapEl: any;
 			mapEl = document.getElementById("map");
 			const map = new maplibregl.Map({
 				container: mapEl,
@@ -24,33 +26,29 @@ export default {
 					visualizePitch: true,
 					showZoom: true,
 					showCompass: true,
-				})
+				}),
+				"bottom-left"
 			);
-
-			const value = `{ 
-				"type": "FeatureCollection",
-				"features": []
-			}
-				`;
+			const value = `{
+						"type": "FeatureCollection",
+						"features": []
+					}
+						`;
 
 			// Hover on each property to see its docs!
-			const myEditor = monaco.editor.create(
-				document.getElementById("code-container"),
-				{
-					value,
-					language: "json",
-					automaticLayout: true,
-					minimap: {
-						enabled: false,
-					},
-					tabSize: 3,
-				}
-			);
-		});
-		return {
-			isSidePanel,
-			toggleSidepanel,
-			activeMenu,
-		};
+			const container: any = document.getElementById("code-container");
+			const myEditor = monaco.editor.create(container, {
+				value,
+				language: "json",
+				automaticLayout: true,
+				minimap: {
+					enabled: false,
+				},
+				tabSize: 3,
+			});
+		},
+		toggleSidepanel() {
+			this.isSidePanel = !this.isSidePanel;
+		},
 	},
 };
